@@ -3,13 +3,12 @@ import requests
 import time
 import re
 import csv
-import os
 
-# Databricks config - Use environment variables for sensitive data
-host = os.environ.get('DATABRICKS_HOST', 'https://your-databricks-instance.cloud.databricks.com')
-token = os.environ.get('DATABRICKS_TOKEN', 'YOUR_TOKEN_HERE')
-warehouse_id = os.environ.get('DATABRICKS_WAREHOUSE_ID', 'YOUR_WAREHOUSE_ID')
-job_id = os.environ.get('DATABRICKS_JOB_ID', 'YOUR_JOB_ID')
+# Databricks config
+host = "https://dbc-954e6b63-50c7.cloud.databricks.com"
+token = "dapi93cdbfb3ae25ed43e19ea7b2cb6a70ad"
+warehouse_id = "d4942dbdeafb8d54"
+job_id = "417449821209150"
 
 headers = {
     "Authorization": f"Bearer {token}",

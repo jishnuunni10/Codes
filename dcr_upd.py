@@ -1,7 +1,6 @@
 import requests
 import json
 import pandas as pd
-import os
 from dataclasses import dataclass
 from datetime import datetime, timezone
 
@@ -23,10 +22,8 @@ TASK_SEARCH_PAYLOAD = {
 def get_access_token():
     print("Fetching access token...")
     url = "https://auth.reltio.com/oauth/token?grant_type=client_credentials"
-    # Use environment variable for sensitive credentials
-    auth_header = os.environ.get('RELTIO_AUTH_HEADER', 'YOUR_AUTH_HEADER_HERE')
     headers = {
-        'Authorization': f'Basic {auth_header}'
+        'Authorization': 'Basic Tk9WQVJUSVNfSU1ETkFfQVBJX1VTRVI6M2dhWmhtNm9yYkFxJU0wbXo+dHZJPHBVZjY2VTFyQj8'
     }
     response = requests.post(url, headers=headers)
     response.raise_for_status()
